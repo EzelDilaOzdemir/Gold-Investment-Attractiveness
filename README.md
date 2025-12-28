@@ -34,96 +34,28 @@ LSTM for Neural Network	Long-term temporal dependencies
 
 Each model captures a different structural aspect of gold price dynamics.
 
-⚖️ Optimal Ensemble
-
-Model outputs are aligned and blended via least-squares optimized weights:
-
-𝑦
-^
-=
-𝑤
-1
-𝐴
-𝑅
-𝐼
-𝑀
-𝐴
-+
-𝑤
-2
-𝑅
-𝐹
-+
-𝑤
-3
-𝑋
-𝐺
-𝐵
-+
-𝑤
-4
-𝐿
-𝑆
-𝑇
-𝑀
-y
-^
-	​
-
-=w
-1
-	​
-
-ARIMA+w
-2
-	​
-
-RF+w
-3
-	​
-
-XGB+w
-4
-	​
-
-LSTM
-
-This produces a robust valuation estimate rather than a single-model forecast.
-
-🔴 Live Inference Logic
+**🔴 Live Inference Logic**
 
 The most recent 12 months of macro data are held out as a live input window.
 The system generates a current 6-month expected gold return using trained models and optimized ensemble weights.
 
-📈 Final Output
-6 Month EXPECTED GOLD RETURN (%): <predicted_value>
-
+**📈 Final Output**: 6 Month EXPECTED GOLD RETURN (%): <predicted_value>
 
 This value represents the macro-conditioned forward valuation signal.
 
 ⚙️ Installation
+
 pip install numpy pandas yfinance pandas-datareader scikit-learn xgboost statsmodels tensorflow
 
 ▶️ How to Run
 python gold_valuation_engine.py
 
-🎓 Learning Outcomes
 
-Financial time-series modeling
-
-Macroeconomic factor research
-
-Ensemble learning and model weighting
-
-Deep learning for economic forecasting
-
-Valuation-oriented system design
-
-⚠️ Disclaimer
+**⚠️ Disclaimer**
 
 This project is for educational and research purposes only and does not constitute financial advice.
 
-👩‍💻 Author
+**👩‍💻 Author**
 
 Student researcher with strong interest in quantitative finance, macro modeling, and valuation analytics.
 Open to feedback, research discussion, and collaboration.
